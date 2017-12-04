@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-product {
+            width: 1024px;
+            height: 440px;
+        }
+
+        .app-product ul li {
+            list-style: none;
+        }
+
+        .app-product ul li {
+            float: left;
+        }
+
+        .app-product ul li:nth-child(2) {
+            padding-left: 24px;
+        }
+
+        .app-product ul li img {
+            display: block;
+            width: 500px;
+            height: 360px;
+        }
+
+        .box {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            background-color: #000;
+        }
+
+        .bbig-box {
+            width: 500px;
+            height: 360px;
+        }
+
+        .show-box {
+            opacity: 0.6;
+        }
+
+        .app-shadow {
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -125px;
+            margin-top: -75px;
+        }
+
+        .app-shadow h1 {
+            font-size: 25px;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        .product-shadow p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .app-shadow a {
+            display: block;
+            width: 139px;
+            height: 35px;
+            line-height: 35px;
+            margin: 40px auto;
+            background-color: #e3007d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-product  clearfix">
+        <ul>
+            <li>
+                <img src="./images/product/cp6.jpg" alt="">
+                <div class="box bbig-box">
+                    <div class="app-shadow" style=" text-align: center;">
+                        <h1>爱飘飘酵素SOSO果冻</h1>
+                        <p>补血养心、润肺</p>
+                        <a href="">查看详情</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./images/product/cp7.jpg" alt="">
+                <div class="box bbig-box">
+                    <div class="app-shadow" style=" text-align: center;">
+                        <h1>爱飘飘酵素SOSO果冻</h1>
+                        <p>补血养心、润肺</p>
+                        <a href="">查看详情</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+       
+    </div>
+</body>
+<script src="./jquery-3.2.1.js"></script>
+<script>
+    $("li >div.box").on("mouseover mouseout", function () {
+        $(this).toggleClass("show-box")
+    });
+</script>
+
+</html>

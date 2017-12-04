@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .w {
+            width: 1024px;
+            margin: 100px auto;
+        }
+        a{
+           text-decoration: none;
+        }
+
+        .produce {
+            height: 670px;
+        }
+
+        .produce ul li {
+            float: left;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 0px;
+            padding-bottom: 30px;
+        }
+
+        .produce ul li img {
+            display: block;
+            width: 310px;
+            height: 320px;
+        }
+
+        .box {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            background-color: #000;
+        }
+
+        .big-box {
+            width: 360px;
+            height: 670px;
+        }
+
+        .small-box {
+            width: 310px;
+            height: 320px;
+        }
+
+        .show-box {
+            opacity: 0.6;
+        }
+          /*大图*/
+        .big-shadow {
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -125px;
+            margin-top: -75px;
+        }
+
+        .big-shadow h1 {
+            font-size: 25px;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        .big-shadow p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .big-shadow a {
+            display: block;
+            width: 139px;
+            height: 35px;
+            line-height: 35px;
+            margin: 40px auto;
+            background-color: #e3007d;
+            color: white;
+        }
+        /*小图*/
+        .shadow {
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -125px;
+            margin-top: -75px;
+        }
+
+        .shadow h1 {
+            font-size: 25px;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        .shadow p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .shadow a {
+            display: block;
+            width: 139px;
+            height: 35px;
+            line-height: 35px;
+            margin: 40px auto;
+            background-color: #e3007d;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="produce w">
+        <ul>
+            <li style=" position: relative;">
+                <img src="./images/cp7.jpg" alt="" style="width:360px;height:670px;">
+                <div class="box big-box">
+                    <div class="big-shadow" style=" text-align: center;">
+                        <h1>爱飘飘酵素SOSO果冻</h1>
+                        <p>补血养心、润肺</p>
+                        <a href="">查看详情</a>
+                    </div>
+                </div>
+
+            </li>
+            <li style=" position: relative;">
+                <img src="./images/cp1.jpg" alt="" style="width:310px;height:320px;">
+                <div class="box small-box">
+                    <div class="shadow">
+                        <div class="title" style="text-align: center;">
+                            <h1>养森瘦瘦塑身套</h1>
+                            <p>调理身体塑形</p>
+                            <a href="./product3.html">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style=" position: relative;">
+                <img src="./images/cp2.jpg" alt="" style="width:310px;height:320px;">
+                <div class="box small-box">
+                    <div class="shadow">
+                        <div class="title" style="text-align: center;">
+                            <h1>养森爱巢益生套</h1>
+                            <p>祛寒邪，平气虚</p>
+                                <a href="./product4.html">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style=" position: relative;">
+                <img src="./images/cp3.jpg" alt="" style="width:310px;height:320px;">
+                <div class="box small-box">
+                    <div class="shadow">
+                        <div class="title" style="text-align: center;">
+                            <h1>养森活力强盛套</h1>
+                            <p>调理肾部,增强肾气</p>
+                                <a href="./product5.html">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style=" position: relative;">
+                <img src="./images/cp4.jpg" alt="" style="width:310px;height:320px;">
+                <div class="box small-box">
+                      <div class="shadow">
+                    <div class="title" style="text-align: center;">
+                        <h1>养森肩颈舒康</h1>
+                        <p>适用于肩颈疼痛与肩颈亚健康人群</p>
+                            <a href="./product6.html">查看详情</a>
+                    </div>
+                </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+<script src="./jquery-3.2.1.js"></script>
+<script>
+    $("li >div.box").on("mouseover mouseout", function () {
+        $(this).toggleClass("show-box")
+    });
+</script>
+
+</html>
